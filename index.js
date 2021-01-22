@@ -216,15 +216,6 @@ const create = (win, options) => {
 		let dictionarySuggestions = [];
 		if (hasText && props.misspelledWord && props.dictionarySuggestions.length > 0) {
 			dictionarySuggestions = props.dictionarySuggestions.map(suggestion => word(suggestion));
-		} else {
-			dictionarySuggestions.push(
-				{
-					id: 'dictionarySuggestions',
-					label: 'No Guesses Found',
-					visible: Boolean(hasText && props.misspelledWord),
-					enabled: false
-				}
-			);
 		}
 
 		let menuTemplate = [
